@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>Matterhorn - source</title>
+    <link href="/css/styles.css"  type=text/css rel=stylesheet>
+    <link href="/css/matterhorn_v2u_embedded.css" type=text/css rel=stylesheet>
+    <link href="/css/matterhorn.css" type=text/css rel=stylesheet>
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.jeditable.mini.js"></script>
+    <script type="text/javascript" src="/admin/js/updater.js"></script>
+    <script type="text/javascript" src="/admin/js/forms.js"></script>
+  </head>
+
+  <body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="topbanner">
+  <tr>
+    <td valign="bottom" width="1"><a href="http://www.opencastproject.org/project/matterhorn" style="outline-style: none" target="_blank"><img src="/images/matterhorn_logo.png" alt="matterhorn" title="matterhorn main page" border="0"/></a></td>
+    <td VALIGN="center" align="center" id="systemdescr"></td>
+    <td VALIGN="center" align="right" class="productname">
+        Matterhorn    </td>
+  </tr>
+</table>
+      <div class="wrapper">
+<div class="role" ><span class="role-name">Administrator</span><a href="/logout.cgi" class="role-logout" id="logout-button"></a></div><div style="height:30px"></div>           <div class="wrapper_content">
+      <div id="nav_column">
+<div class="category_1"><h1>Channels</h1><style type="text/css">
+
+div.navmenu a.simple {
+	color: blue;
+	background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="category_1">
+<div class="category_2" id="1"><h1><span style="color:#808080">&nbsp;1.</span> <a id="menu_channel_1" href="/admin/channel1/status">dce-pr</a></h1>
+</div>
+<div class="category_2" id="2"><h1><span style="color:#808080">&nbsp;2.</span> <a id="menu_channel_2" href="/admin/channel2/status">dce-pn</a></h1>
+</div>
+<div class="category_2" id="3"><h1><span style="color:#808080">&nbsp;3.</span> <a id="menu_channel_3" href="/admin/channel3/status">dce Live Merged</a></h1>
+</div>
+<div class="category_2" id="4"><h1><span style="color:#808080">&nbsp;4.</span> <a id="menu_channel_4" href="/admin/channel4/status">dce-LiveMerged-LowBR</a></h1>
+</div>
+<div class="navmenu"><a class="simple" href="/admin/add_channel.cgi"><nobr>Add channel</nobr></a></div></div>
+</div><div class="category_1"><h1>Recorders</h1><style type="text/css">
+
+div.navmenu a.simple {
+	color: blue;
+	background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="category_1"><div class="category_2"><h1><span style="color:#808080">&nbsp;2.</span> <a id="menu_mrecorder_2" href="/admin/recorder2/archive">Recorder 2</a></h1></div><div class="category_2"><h1><span style="color:#808080">&nbsp;3.</span> <a id="menu_mrecorder_3" href="/admin/recorder3/archive">Recorder 3</a></h1></div><div class="category_2"><h1><span style="color:#808080">&nbsp;4.</span> <a id="menu_mrecorder_4" href="/admin/recorder4/archive">Recorder 4</a></h1></div><div class="navmenu"><a class="simple" href="/admin/add_recorder.cgi"><nobr>Add recorder</nobr></a></div></div></div><div class="category_1"><h1>Sources</h1><style type="text/css">
+
+div.navmenu a.simple {
+    color: blue;
+    background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="navmenu"><div id='navmenucurrent'><a id='menu_dev_D2P280762.hdmi-a' href="/admin/sources/D2P280762.hdmi-a">HDMI-A</a></div><div><a id='menu_dev_D2P280762.hdmi-b' href="/admin/sources/D2P280762.hdmi-b">HDMI-B</a></div><div><a id='menu_dev_D2P280762.sdi-a' href="/admin/sources/D2P280762.sdi-a">SDI-A</a></div><div><a id='menu_dev_D2P280762.sdi-b' href="/admin/sources/D2P280762.sdi-b">SDI-B</a></div><div><a id='menu_dev_D2P280762.vga-a' href="/admin/sources/D2P280762.vga-a">VGA-A</a></div><div><a id='menu_dev_D2P280762.vga-b' href="/admin/sources/D2P280762.vga-b">VGA-B</a></div><div><a id='menu_dev_D2P280762.analog-a' href="/admin/sources/audio_D2P280762.analog-a">Analog-A Audio</a></div><div><a id='menu_dev_D2P280762.analog-b' href="/admin/sources/audio_D2P280762.analog-b">Analog-B Audio</a></div><div><a id='menu_dev_D2P280762.hdmi-a-audio' href="/admin/sources/audio_D2P280762.hdmi-a-audio">HDMI-A Audio</a></div><div><a id='menu_dev_D2P280762.hdmi-b-audio' href="/admin/sources/audio_D2P280762.hdmi-b-audio">HDMI-B Audio</a></div><div><a id='menu_dev_D2P280762.sdi-a-audio' href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></div><div><a id='menu_dev_D2P280762.sdi-b-audio' href="/admin/sources/audio_D2P280762.sdi-b-audio">SDI-B Audio</a></div></div></div>        <div class="category_1"><h1>Configuration</h1>
+          <div class="navmenu">
+          <a href="/admin/mhcfg">Matterhorn Server</a>
+          <a href="/admin/afucfg">Automatic File Upload</a>
+          <a href="/admin/usbdrivecfg">External USB drive</a>
+          <a href="/admin/ftpaccesscfg">FTP Server</a>
+          <a href="/admin/upnp">UPnP</a>
+          <a href="/admin/networkcfg">Network</a>
+          <a href="/admin/timesynccfg">Date and Time</a>
+          <a href="/admin/accesscfg">Access passwords</a>
+          <a href="/admin/touchscreencfg">Touch Screen</a>
+          <a href="/admin/serialcfg">Serial Port</a>
+          <a href="/admin/cms">Branding Content</a>
+          <a href="/admin/maintenancecfg">Maintenance</a>
+          <a href="/admin/diskcheckcfg">Disk check</a>
+          <a href="/admin/firmwarecfg">Firmware Upgrade</a>
+          <a href="/admin/infocfg">Info</a>
+          </div>
+        </div>
+<div class="category_1"><h1>Internal storage</h1>
+Total: 929.85 GB<br/>
+Used: 0.10 GB<br/>
+Free: 929.76 GB<br/>
+<table cellpadding="0" cellspacing="0" id="graph" style="width:100%">
+  <tr>
+    <td width="0%" id="red_graph"></td>
+    <td width="100%" align="center" id="green_graph">100%</td>
+  </tr>
+</table>
+</div>      </div>
+      <div id=main_win>
+      <div id="global_message_banner"></div><style type="text/css">
+input { 
+margin:0; 
+position:relative;
+left:0;
+}
+input[type=submit] {
+    text-align: left;
+    position: relative;
+    margin: 0;
+}
+
+div.device_discovered {
+    font-size:13px;
+    margin-bottom:1em;
+    margin-left:1em;
+}
+
+.device_description {
+    color:gray;
+}
+
+.device_description_detailed {
+    color:gray;
+    margin-bottom: 1em;
+}
+
+a.simple {
+    font-weight:normal;
+}
+
+.nosignal_image{
+    display: none;
+    max-height: 256px;
+    max-width:  256px;
+}
+
+.drop-targeted {
+  border: 1px red dotted;
+}
+
+</style>
+
+<script type="text/javascript" src="/admin/js/preview_control.js"></script>
+
+<h1>Local framegrabber <span class='editable_in_place' id='devname'>HDMI-A</span></h1><div id="wui-id-used-in-channels" class="wui-message-banner wui-message-notice"><div class="wui-message-banner-outer"><div class="wui-message-banner-inner">Currently used in <a href="/admin/channel1/status">dce-pr</a></div></div></div>    <div class="device_description_detailed" id="deviceinfo">
+    <img src="/images/progress.gif"> Requesting device data...
+    </div>
+    
+    <script type="text/javascript"> 
+	var result = document.getElementById('deviceinfo');
+
+    $.ajax({
+                   url:"/admin/deviceinfo.cgi?mode=detail&useframesize=yes&id=" + "D2P280762.hdmi-a",                   
+                   cache: false,
+                   processData: false,
+                   contentType: false,
+                   type:'POST',				   
+                   success: function (data, status, req) {
+                       result.innerHTML = data;
+                   },
+                   error:function (req, status, error) {
+                       result.innerHTML = data;
+                   }
+               });
+    
+    </script>
+    <h2>Frame grabber settings</h2><form name="vsource" id="vsource" action="" method="POST" onsubmit="forms_prepare_submit('vsource'); return true;"><input id="vsource_pfd_form_id" name="pfd_form_id" type="hidden" value="vsource"><table class="forms_table"><tbody id="frmgrab_adjustments"><tr id="line_rotation"><td class="forms_tdtitle" valign="top"><nobr>Rotate:</nobr></td><td><select id="rotation" name="rotation"><option value=""  SELECTED>no rotation</option>
+<option value="90" >90&deg; clockwise</option>
+<option value="270" >90&deg; counter clockwise</option>
+<option value="180" >180&deg;</option>
+</select></td></tr><tr id="line_deinterlacing"><td class="forms_tdtitle" valign="top">&nbsp;</td><td><input type="checkbox" name="deinterlacing" id="deinterlacing" value="on" checked="checked" />&nbsp;<input type="hidden" name="deinterlacing" id="deinterlacing_unchecked" value="" /><label style="display:inline; text-decoration:none; font-weight:normal; width:100%; margin-top:0;" for="deinterlacing">Enable deinterlacing</label></td></tr></tbody><tbody id="nosignal"><tr><td colspan="2"><h3 style="padding:3em 0 0 2em;">"No signal" image</h3></td></tr><tr id="line_nosignal_src"><td class="forms_tdtitle" valign="top"><nobr>Image:</nobr></td><td><select id="nosignal_src" name="nosignal_src"><option value=""  SELECTED>NONE</option>
+<option value="default" >DEFAULT</option>
+</select></td></tr><tr><td class="forms_tdtitle" valign="top">&nbsp;</td><td><img id='nosignal_image' class='nosignal_image'></img></td></tr><tr id="line_nosignal_timeout"><td class="forms_tdtitle" valign="top"><nobr>Timeout:</nobr></td><td><input id="nosignal_timeout" name="nosignal_timeout" type="text" maxlength="5" size="5" value="" placeholder="5">&nbsp;second(s)</td></tr></tbody><tr><td></td><td><input class="apply_button"  id="apply_vsource" type="submit" value="Apply"></td></tr></table></form><script type='text/javascript'>var selectedNoSignalId ='';</script><h2>EDID</h2>
+<div class="wui-message-banner wui-message-warning"><div class="wui-message-banner-outer"><div class="wui-message-banner-inner">Please make sure that all input cables are disconnected!</div></div></div><table class="forms_table">
+<tbody id="edid_commands">
+<tr id="edid_upload">
+    <td class="forms_tdtitle" valign="top"><nobr>Upload EDID file:</nobr></td>
+    <td>
+        <input type="file" id="edid_uploadfile" name="edid_uploadfile">
+        <input type="button" value="upload" onclick="edid_upload()">
+	<span id="edid_upload_result"></span>
+    </td>
+</tr>
+<tr id="edid_restore">
+    <td class="forms_tdtitle" valign="top"><nobr>Restore default EDID:</nobr></td>
+    <td>
+        <input type="button" value="restore" onclick="edid_reset()">
+	<span id="edid_restore_result"></span>
+    </td>
+</tr>
+</tbody>
+</table>
+<script>
+   function edid_upload() 
+   {
+      var file = document.getElementById("edid_uploadfile");
+      var result = document.getElementById("edid_upload_result");
+      result.innerHTML = "<img src='/images/progress.gif'>Stand by...";
+      /* Create a FormData instance */
+      var formData = new FormData();
+      formData.append("command","upload");
+      /* Add the file */ 
+      formData.append("edid", file.files[0]);
+      formData.append("serial","D2P280762.hdmi-a");
+      $.ajax({
+                   url:'/admin/edid.cgi',
+                   data:formData,
+                   cache: false,
+                   processData: false,
+                   contentType: false,
+                   type:'POST',
+                   success:function (data, status, req) {
+                       result.innerHTML = data;
+                   },
+                   error:function (req, status, error) {
+                       result.innerHTML = "Error:" . data;
+                   }
+               });
+   }
+   function edid_reset() 
+   {
+      /* Create a FormData instance */
+      var formData = new FormData();
+      var result = document.getElementById("edid_restore_result");
+      result.innerHTML = "<img src='/images/progress.gif'> Stand by...";
+      formData.append("command","restore");
+      formData.append("serial","D2P280762.hdmi-a");
+      $.ajax({
+                   url:'/admin/edid.cgi',
+                   data:formData,
+                   cache: false,
+                   processData: false,
+                   contentType: false,
+                   type:'POST',
+                   success:function (data, status, req) {
+                       result.innerHTML = data;
+                   },
+                   error:function (req, status, error) {
+                       result.innerHTML = "Error:" . data;
+                   }
+               });
+   }
+</script>
+<h2>Snapshot:</h2><img id='preview_image' width='640' height='auto' autorefresh='3000'>
+    
+<script type="text/javascript">
+
+var pictureList = [];
+
+function getPictureUrl(id) {
+  var url = '';
+  pictureList.some(function (picture) {
+    if (picture.id === id) {
+      url = picture.url;
+      return true;
+    }
+  });
+  return url;
+}
+
+// Nosignal image was changed
+function logoChanged(id) {
+  var cb = document.getElementById(id + '_src');
+  if (cb != null) {
+    var pictureId = cb.options[cb.selectedIndex].value;                          // Relative path
+    var has_image = !(pictureId == '' || pictureId == 'default' || pictureId == 'none');
+    var img = document.getElementById(id + '_image');
+    // Show/hide image
+    if (has_image) {
+      img.src = getPictureUrl(pictureId);
+      img.style.display = 'block';
+    }
+    else {
+      img.style.display = 'none';
+    }
+  }
+}
+
+function createSelectLine(id, value) {
+  return '<option value="' + id + '">' + value + '</option>';
+}
+
+function nosignal_upload(fdata) {
+  var pictureSelect = $('#nosignal_src');
+  $.ajax({
+    url: '/admin/files/pictures',
+    data: fdata,
+    cache: false,
+    processData: false,
+    contentType: false,
+    dataType: 'json',
+    type: 'POST',
+    success: function (data, status, req) {
+      newPicture = data.result[0];
+
+      var isAlreadyInList = pictureList.some(function (picture) {
+        return picture.id === newPicture.id;
+      });
+
+      if (!isAlreadyInList) {
+        pictureList.push(newPicture);
+        var pictureline = createSelectLine(newPicture.id, newPicture.name + ' [' + newPicture.width + 'x' + newPicture.height + ']');
+        pictureSelect.append(pictureline);
+      }
+      pictureSelect.val(newPicture.id).change();
+    },
+    error: function (req, status, error) {
+      alert("Couldn't add picture file!");
+    }
+  });
+}
+
+
+function fillPictureList(callback) {
+
+  var pictureSelect = $('#nosignal_src');
+  $.ajax({
+    url: '/admin/files/pictures',
+    cache: false,
+    processData: false,
+    contentType: false,
+    dataType: 'json',
+    type: 'GET',
+    success: function (data, status, req) {
+      pictureList = data.result;
+      var selectedTag = '';
+      pictureSelect.empty();
+      pictureSelect.append(createSelectLine("", 'DEFAULT'));
+      pictureList.forEach(function (picture) {
+        var pictureline = createSelectLine(picture.id, picture.name + ' [' + picture.width + 'x' + picture.height + ']');
+        pictureSelect.append(pictureline);
+      });
+
+      var isSelectedFromList = pictureList.some(function (picture) {
+        return picture.id === selectedNoSignalId;
+      });
+      if (isSelectedFromList) {
+        pictureSelect.val(selectedNoSignalId);
+      } else {
+        pictureSelect.append(createSelectLine("selectedNoSignalId", selectedNoSignalId + " [doesn't exist]"));
+        pictureSelect.val('');
+      }
+      callback();
+    },
+    error: function (req, status, error) {
+      console.log("Couldn't get list of pictures");
+    }
+  });
+}
+
+function addNosignalSwitchHandler() {
+  var image_id = 'nosignal';
+  var cb = document.getElementById('nosignal_src');
+  if (cb != null) {
+    cb.onchange = function (img_id) {
+      return function () {
+        logoChanged(img_id);
+      };
+    }(image_id);
+    logoChanged(image_id);
+  }
+}
+
+
+function addImageDropHandlers() {
+  var dragCounter = 0;
+
+  $('#nosignal').on({
+    drop: function (e) {
+      console.log('drop');
+      e.stopPropagation();
+      e.preventDefault();
+      var fileToSend = e.originalEvent.dataTransfer.files[0];
+      var fd = new FormData();
+      fd.append('file', fileToSend);
+      nosignal_upload(fd);
+      $(this).removeClass('drop-targeted');
+    },
+    dragenter: function (e) {
+      console.log('dragenter');
+      e.stopPropagation();
+      e.preventDefault();
+      dragCounter++;
+      $(this).addClass('drop-targeted');
+      return false;
+    },
+    dragover: function (e) {
+      console.log('dragover');
+      e.stopPropagation();
+      e.preventDefault();
+      return false;
+    },
+    dragleave: function (e) {
+      console.log('dragleave');
+      e.stopPropagation();
+      e.preventDefault();
+      dragCounter--;
+      if (dragCounter <= 0) {
+        dropTargeted = false;
+        $(this).removeClass('drop-targeted');
+      }
+      return false;
+    }
+  });
+}
+
+
+$(document).ready(function() {
+    var devid = "D2P280762.hdmi-a";
+  
+    // Do nosignal initialization only if nosignal is required (selectedNoSignalId is inited)
+    if(typeof selectedNoSignalId !== 'undefined') {
+      pictureList = [];
+
+      fillPictureList(function() {
+        addNosignalSwitchHandler();
+      });
+
+      addImageDropHandlers();
+    }
+
+        if( devid != 'add' )
+    {
+        $('#devname').editable( '/admin/ajax/rename_device.cgi',
+                           { 
+                            width : 'none',
+                            submitdata : {devid: devid},
+                            callback : function(newname) { 
+                                            $('#menu_dev_' + devid.replace(/(:|\.)/g,'\\$1')).html(newname); 
+                                        },
+                           }
+                           );
+    }
+     
+    loadPreview( "preview_image", "source", devid );
+                
+});
+
+function confirm_device_delete()
+{
+    return confirm( "Are you sure you want to remove this video source?\nYou can't undo this action." );
+}
+    
+</script>
+
+      </div>
+      </div>
+      </div>
+
+
+  </body>
+</html>
+

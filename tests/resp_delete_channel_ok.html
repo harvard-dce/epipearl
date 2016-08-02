@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>Matterhorn - status</title>
+    <link href="/css/styles.css"  type=text/css rel=stylesheet>
+    <link href="/css/matterhorn_v2u_embedded.css" type=text/css rel=stylesheet>
+    <link href="/css/matterhorn.css" type=text/css rel=stylesheet>
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.jeditable.mini.js"></script>
+    <script type="text/javascript" src="/admin/js/updater.js"></script>
+    <script type="text/javascript" src="/admin/js/forms.js"></script>
+  </head>
+
+  <body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="topbanner">
+  <tr>
+    <td valign="bottom" width="1"><a href="http://www.opencastproject.org/project/matterhorn" style="outline-style: none" target="_blank"><img src="/images/matterhorn_logo.png" alt="matterhorn" title="matterhorn main page" border="0"/></a></td>
+    <td VALIGN="center" align="center" id="systemdescr"></td>
+    <td VALIGN="center" align="right" class="productname">
+        Matterhorn    </td>
+  </tr>
+</table>
+      <div class="wrapper">
+<div class="role" ><span class="role-name">Administrator</span><a href="/logout.cgi" class="role-logout" id="logout-button"></a></div><div style="height:30px"></div>           <div class="wrapper_content">
+      <div id="nav_column">
+<div class="category_1"><h1>Channels</h1><style type="text/css">
+
+div.navmenu a.simple {
+	color: blue;
+	background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="category_1">
+<div class="category_2" id="1"><h1><span style="color:#808080">&nbsp;1.</span> <a id="menu_channel_1" href="/admin/channel1/status">dce-pr</a></h1>
+</div>
+<div class="category_2" id="2"><h1><span style="color:#808080">&nbsp;2.</span> <a id="menu_channel_2" href="/admin/channel2/status">dce-pn</a></h1>
+</div>
+<div class="category_2" id="3"><h1><span style="color:#808080">&nbsp;3.</span> <a id="menu_channel_3" href="/admin/channel3/status">dce-live</a></h1>
+</div>
+<div class="category_2" id="4"><h1><span style="color:#808080">&nbsp;4.</span> <a id="menu_channel_4" href="/admin/channel4/status">dce-pr</a></h1>
+</div>
+<div class="navmenu"><a class="simple" href="/admin/add_channel.cgi"><nobr>Add channel</nobr></a></div></div>
+</div><div class="category_1"><h1>Recorders</h1><style type="text/css">
+
+div.navmenu a.simple {
+	color: blue;
+	background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="category_1"><div class="category_2"><h1><span style="color:#808080">&nbsp;2.</span> <a id="menu_mrecorder_2" href="/admin/recorder2/archive">Recorder 2</a></h1></div><div class="category_2"><h1><span style="color:#C0C0C0">&nbsp;3.</span> <a id="menu_mrecorder_3" href="/admin/recorder3/archive">Recorder naomi 3</a></h1></div><div class="navmenu"><a class="simple" href="/admin/add_recorder.cgi"><nobr>Add recorder</nobr></a></div></div></div><div class="category_1"><h1>Sources</h1><style type="text/css">
+
+div.navmenu a.simple {
+    color: blue;
+    background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="navmenu"><div><a id='menu_dev_D2P280762.hdmi-a' href="/admin/sources/D2P280762.hdmi-a">HDMI-A</a></div><div><a id='menu_dev_D2P280762.hdmi-b' href="/admin/sources/D2P280762.hdmi-b">HDMI-B</a></div><div><a id='menu_dev_D2P280762.sdi-a' href="/admin/sources/D2P280762.sdi-a">SDI-A</a></div><div><a id='menu_dev_D2P280762.sdi-b' href="/admin/sources/D2P280762.sdi-b">SDI-B</a></div><div><a id='menu_dev_D2P280762.vga-a' href="/admin/sources/D2P280762.vga-a">VGA-A</a></div><div><a id='menu_dev_D2P280762.vga-b' href="/admin/sources/D2P280762.vga-b">VGA-B</a></div><div><a id='menu_dev_D2P280762.analog-a' href="/admin/sources/audio_D2P280762.analog-a">Analog-A Audio</a></div><div><a id='menu_dev_D2P280762.analog-b' href="/admin/sources/audio_D2P280762.analog-b">Analog-B Audio</a></div><div><a id='menu_dev_D2P280762.hdmi-a-audio' href="/admin/sources/audio_D2P280762.hdmi-a-audio">HDMI-A Audio</a></div><div><a id='menu_dev_D2P280762.hdmi-b-audio' href="/admin/sources/audio_D2P280762.hdmi-b-audio">HDMI-B Audio</a></div><div><a id='menu_dev_D2P280762.sdi-a-audio' href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></div><div><a id='menu_dev_D2P280762.sdi-b-audio' href="/admin/sources/audio_D2P280762.sdi-b-audio">SDI-B Audio</a></div></div></div>        <div class="category_1"><h1>Configuration</h1>
+          <div class="navmenu">
+          <a href="/admin/mhcfg">Matterhorn Server</a>
+          <a href="/admin/afucfg">Automatic File Upload</a>
+          <a href="/admin/usbdrivecfg">External USB drive</a>
+          <a href="/admin/ftpaccesscfg">FTP Server</a>
+          <a href="/admin/upnp">UPnP</a>
+          <a href="/admin/networkcfg">Network</a>
+          <a href="/admin/timesynccfg">Date and Time</a>
+          <a href="/admin/accesscfg">Access passwords</a>
+          <a href="/admin/touchscreencfg">Touch Screen</a>
+          <a href="/admin/serialcfg">Serial Port</a>
+          <a href="/admin/cms">Branding Content</a>
+          <a href="/admin/maintenancecfg">Maintenance</a>
+          <a href="/admin/diskcheckcfg">Disk check</a>
+          <a href="/admin/firmwarecfg">Firmware Upgrade</a>
+          <a href="/admin/infocfg">Info</a>
+          </div>
+        </div>
+<div class="category_1"><h1>Internal storage</h1>
+Total: 929.85 GB<br/>
+Used: 0.10 GB<br/>
+Free: 929.76 GB<br/>
+<table cellpadding="0" cellspacing="0" id="graph" style="width:100%">
+  <tr>
+    <td width="0%" id="red_graph"></td>
+    <td width="100%" align="center" id="green_graph">100%</td>
+  </tr>
+</table>
+</div>      </div>
+      <div id=main_win>
+      <div id="global_message_banner"></div><script type="text/javascript" src="/admin/js/preview_control.js"></script>
+
+<strong style="color:darkred; font-size:130%;">Channel &laquo;Channel 6&raquo; successfully deleted.</strong>
+<script type="text/javascript">
+
+var channel     = 6;
+var is_external = false;
+
+function updateInfo()
+{
+	$("#actual_fps").load("/admin/ajax/channel_encoder_fps.cgi?channel=" + channel);
+	$("#services_state").load("/admin/ajax/services_state.cgi?channel=" + channel);
+	setTimeout(updateInfo, 1500);
+}
+
+setTimeout(updateInfo, 2500);
+
+function confirm_channel_delete()
+{
+    var form = $('#fn_delete');
+    var btn  = form.find(':submit');
+    var info = form.find('#delete_status');
+    
+    btn.attr('disabled','disabled');
+    info.text('Requesting status...').addClass('in_progress').show();
+    
+    $.ajax({
+        type:'GET',
+        dataType: 'json',
+        url: '/admin/ajax/get_channel_status.cgi',
+        data: { channel: channel, archive: 'all' },
+        success: function(data)
+        {
+            btn.removeAttr('disabled');
+            info.hide();
+            
+            if (data.channel == channel)
+            {
+                var archive = data.archive;
+                var msg = '';
+                if (archive.files.count > 0 || archive.afu.count > 0)
+                {
+                    msg = "Are you sure you want to remove this channel with and all related recorded files?";
+                    msg += "\n * " + archive.files.count + " recorded file(s).";
+                    if (archive.afu.count > 0)
+                        msg += "\n * " + archive.afu.count + " file(s) queued for Automatic File Upload.";
+                    
+                    if (archive.profiles.length > 5)
+                        msg += "\n * These recordings could have been made using " + archive.profiles.length + " existing configuration preset(s).";
+                    else if (archive.profiles.length > 0)
+                        msg += "\n * These recordings could have been made when using the following configuration preset(s): " + archive.profiles.join(', ') + ".";
+                    
+                    msg += "\nYou can't undo this action.";
+                }
+                else
+                {
+                    msg = "Are you sure you want to remove this channel?";
+                }
+                
+                if (confirm(msg))
+                {
+                    form.submit();
+                }
+            }
+        },
+        error : function(e)
+        {
+            btn.removeAttr('disabled');
+            info.text('Failed to retrieve channel status.').removeClass('in_progress');
+        }
+    });
+    
+    // Form will be submitted after processing channel status
+    return false;
+}
+
+if( ! is_external )
+    loadPreview( "preview_image", "channel", "channel" + channel );
+
+</script>
+
+      </div>
+      </div>
+      </div>
+
+
+  </body>
+</html>
+

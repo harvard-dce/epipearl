@@ -2,7 +2,7 @@
 
 __author__ = 'nmaekawa'
 __email__ = 'nmaekawa@g.harvard.edu'
-__version__ = '0.1.1'
+__version__ = '0.2.0'
 
 from epipearl import Epipearl
-from epipearl import EpipearlError
+from errors import *

@@ -1,9 +1,13 @@
 epipearl
 ===============================
 
-python client for [epiphan-pearl][pearl] [http api][pearl-http-api]
+Python client for [epiphan-pearl][pearl]. It provides a client interface for
+epiphan-pearl [http api][pearl-http-api], and some of its web ui configuration
+interface, and DCE custom web ui configuration as well.
 
-this software shoud be considered alpha, therefore likely to change/break in the near future.
+Current version of Epipearl is tested against _v3.15.3f_ firmware.
+
+This software shoud be considered alpha, therefore likely to change/break in the near future.
 
 
 install
@@ -13,8 +17,8 @@ install
 
 
 
-example usage
--------------
+example usage to get and set channels parameters
+------------------------------------------------
 
     from epipearl import Epipearl
     client = Epipearl( "http://epiphan_pearl_address", "admin", "secret_password" )
@@ -31,13 +35,82 @@ example usage
 
 
 
-credits
----------
+example usage of web ui methods
+------------------------------------------------
 
-Tools used in rendering this package:
+Besides the HTTP API calls `get_params()` and `set_params()`, epipearl exposes
+some web ui HTML form posts as python calls.
 
-* [Cookiecutter][cookiecutter]
-* [cookiecutter-dce package template][dce-pypackage]
+For example, if you need to create a new channel:
+
+    # create the client
+    import requests
+    from epipearl.errors import SettingConfigError
+    from epipearl.errors IndiscernibleResponseFromWebUiError
+    from epipearl import Epipearl
+    client = Epipearl( "http://epiphan_pearl_address", "admin", "secret_password" )
+
+    # to create a channel, give it a name
+    channel_id = client.create_channel('my new epiphan-pearl channel')
+
+    # the returned channel_id is the id to be used to reference this channel
+    # in all subsequent operations, like setting the rtmp-push settings
+    try:
+        client.set_channel_rtmp(
+            channel_id=channel_id,
+            rtmp_url='rtmp://some.url.where.to.push.to.eg.akamai',
+            rtmp_stream='stream_name',
+            rtmp_usr='user_for_rtmp_eg_akamai_account',
+            rtmp_pwd='password')
+    except requests.HTTPError:
+        print 'error during http request'
+    except SettingConfigError as e:
+        print 'device web ui returned error or some settings did not take'
+        print e.message
+    except IndiscernibleResponseFromWebUiError:
+        print 'did not understand response from device web ui'
+        print e.message
+    else:
+        print 'channel({}) rtmp settings done'.format(channel_id)'
+
+
+For examples on all implemented web ui calls, please check the unit tests in
+the tests dir of a local clone. Tests also host examples of json files for
+layout inputs and expected json responses from device.
+
+
+
+testing
+------------------------------------------------
+
+During development, epipearl tests were executed using [pytest][pytest].
+
+To run test from a local git clone:
+
+    pip install -r requirements_dev.txt
+
+then, to rul all tests:
+
+    py.test tests
+
+
+You can also run live tests, but these require some environment variables to be
+set:
+
+- EPI\_URL: the url to reach the epiphan-pearl web ui
+- EPI\_USER: the admin username for epiphan-pearl web ui
+- EPI\_PASSWD: the admin password for epiphan-pearl web ui
+- EPI\_PUBLISH\_TYPE: 0 or 6 to stop or start rtmp push in epiphan-pearl
+
+Set these in the environment and do
+
+    export EPI_URL=http://epiphan_pearl_address
+    export EPI_USER=admin_user
+    export EPI_PASSWD=secret_password
+    export EPI_PUBLISH_TYPE=0  # stop rtmp pushing
+    py.test tests --runlive
+
+Live tests will connect with actual device and change its settings.
 
 
 
@@ -58,3 +131,4 @@ copyright
 [pearl]: http://www.epiphan.com/products/pearl/
 [pearl-http-api]:
 http://31t4ggyuf393hqweo1aq90k7.wpengine.netdna-cdn.com/wp-content/uploads/2014/09/Epiphan_Pearl_userguide.pdf
+[pytest]: http://pytest.org/latest/

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+  <head>
+    <title>Matterhorn - infocfg</title>
+    <link href="/css/styles.css"  type=text/css rel=stylesheet>
+    <link href="/css/matterhorn_v2u_embedded.css" type=text/css rel=stylesheet>
+    <link href="/css/matterhorn.css" type=text/css rel=stylesheet>
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.jeditable.mini.js"></script>
+    <script type="text/javascript" src="/admin/js/updater.js"></script>
+    <script type="text/javascript" src="/admin/js/forms.js"></script>
+  </head>
+
+  <body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="topbanner">
+  <tr>
+    <td valign="bottom" width="1"><a href="http://www.opencastproject.org/project/matterhorn" style="outline-style: none" target="_blank"><img src="/images/matterhorn_logo.png" alt="matterhorn" title="matterhorn main page" border="0"/></a></td>
+    <td VALIGN="center" align="center" id="systemdescr"></td>
+    <td VALIGN="center" align="right" class="productname">
+        Matterhorn    </td>
+  </tr>
+</table>
+      <div class="wrapper">
+<div class="role" ><span class="role-name">Administrator</span><a href="/logout.cgi" class="role-logout" id="logout-button"></a></div><div style="height:30px"></div>           <div class="wrapper_content">
+      <div id="nav_column">
+<div class="category_1"><h1>Channels</h1><style type="text/css">
+
+div.navmenu a.simple {
+	color: blue;
+	background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="category_1">
+<div class="category_2" id="1"><h1><span style="color:#808080">&nbsp;1.</span> <a id="menu_channel_1" href="/admin/channel1/status">dce_pr</a></h1>
+</div>
+<div class="category_2" id="2"><h1><span style="color:#808080">&nbsp;2.</span> <a id="menu_channel_2" href="/admin/channel2/status">dce_live_lowbr</a></h1>
+</div>
+<div class="category_2" id="3"><h1><span style="color:#808080">&nbsp;3.</span> <a id="menu_channel_3" href="/admin/channel3/status">dce_live</a></h1>
+</div>
+<div class="category_2" id="4"><h1><span style="color:#808080">&nbsp;4.</span> <a id="menu_channel_4" href="/admin/channel4/status">dce_pn</a></h1>
+</div>
+<div class="navmenu"><a class="simple" href="/admin/add_channel.cgi"><nobr>Add channel</nobr></a></div></div>
+</div><div class="category_1"><h1>Recorders</h1><style type="text/css">
+
+div.navmenu a.simple {
+	color: blue;
+	background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="category_1"><div class="category_2"><h1><span style="color:#808080">&nbsp;1.</span> <a id="menu_mrecorder_1" href="/admin/recorder1/archive">dce_prpn</a></h1></div><div class="navmenu"><a class="simple" href="/admin/add_recorder.cgi"><nobr>Add recorder</nobr></a></div></div></div><div class="category_1"><h1>Sources</h1><style type="text/css">
+
+div.navmenu a.simple {
+    color: blue;
+    background: none;
+    border-bottom:0px dashed blue;
+}
+
+</style>
+
+<div class="navmenu"><div><a id='menu_dev_D2P280762.hdmi-a' href="/admin/sources/D2P280762.hdmi-a">HDMI-A</a></div><div><a id='menu_dev_D2P280762.hdmi-b' href="/admin/sources/D2P280762.hdmi-b">HDMI-B</a></div><div><a id='menu_dev_D2P280762.sdi-a' href="/admin/sources/D2P280762.sdi-a">SDI-A</a></div><div><a id='menu_dev_D2P280762.sdi-b' href="/admin/sources/D2P280762.sdi-b">SDI-B</a></div><div><a id='menu_dev_D2P280762.vga-a' href="/admin/sources/D2P280762.vga-a">VGA-A</a></div><div><a id='menu_dev_D2P280762.vga-b' href="/admin/sources/D2P280762.vga-b">VGA-B</a></div><div><a id='menu_dev_D2P280762.analog-a' href="/admin/sources/audio_D2P280762.analog-a">Analog-A Audio</a></div><div><a id='menu_dev_D2P280762.analog-b' href="/admin/sources/audio_D2P280762.analog-b">Analog-B Audio</a></div><div><a id='menu_dev_D2P280762.hdmi-a-audio' href="/admin/sources/audio_D2P280762.hdmi-a-audio">HDMI-A Audio</a></div><div><a id='menu_dev_D2P280762.hdmi-b-audio' href="/admin/sources/audio_D2P280762.hdmi-b-audio">HDMI-B Audio</a></div><div><a id='menu_dev_D2P280762.sdi-a-audio' href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></div><div><a id='menu_dev_D2P280762.sdi-b-audio' href="/admin/sources/audio_D2P280762.sdi-b-audio">SDI-B Audio</a></div></div></div>        <div class="category_1"><h1>Configuration</h1>
+          <div class="navmenu">
+          <a href="/admin/mhcfg">Matterhorn Server</a>
+          <a href="/admin/afucfg">Automatic File Upload</a>
+          <a href="/admin/usbdrivecfg">External USB drive</a>
+          <a href="/admin/ftpaccesscfg">FTP Server</a>
+          <a href="/admin/upnp">UPnP</a>
+          <a href="/admin/networkcfg">Network</a>
+          <a href="/admin/timesynccfg">Date and Time</a>
+          <a href="/admin/accesscfg">Access passwords</a>
+          <a href="/admin/touchscreencfg">Touch Screen</a>
+          <a href="/admin/serialcfg">Serial Port</a>
+          <a href="/admin/cms">Branding Content</a>
+          <a href="/admin/maintenancecfg">Maintenance</a>
+          <a href="/admin/diskcheckcfg">Disk check</a>
+          <a href="/admin/firmwarecfg">Firmware Upgrade</a>
+            <div id="navmenucurrent"><a href="/admin/infocfg">Info</a></div>
+          </div>
+        </div>
+<div class="category_1"><h1>Internal storage</h1>
+Total: 929.85 GB<br/>
+Used: 0.90 GB<br/>
+Free: 928.95 GB<br/>
+<table cellpadding="0" cellspacing="0" id="graph" style="width:100%">
+  <tr>
+    <td width="0%" id="red_graph"></td>
+    <td width="100%" align="center" id="green_graph">100%</td>
+  </tr>
+</table>
+</div>      </div>
+      <div id=main_win>
+      <div id="global_message_banner"></div><style type="text/css">
+table.channelstable td {
+	padding-top:1em;
+	padding-right:1em;
+	text-align: center;
+	vertical-align: top;
+}
+
+table.channelstable th {
+	text-align:center;
+	padding-left:1em;
+	padding-right:1em;
+}
+
+table.channelstable td a {
+	font-weight:normal;
+}
+
+ul.multiplexed_list {
+	margin:0;
+	padding-left:0;
+	list-style-type:none;
+}
+
+ul.multiplexed_list li {
+	margin-bottom:5px;
+}
+
+tr.nonactive td {
+	color:gray;
+}
+
+.statusinfo {
+	color: green;
+}
+
+.statusinfo.warning {
+	color: orange;
+}
+
+.statusinfo.error {
+	color: red;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function toggle_sources(channel)
+{
+	$("#show_link_" + channel).toggle();
+	$("#sources_list_" + channel).toggle();
+}
+
+</script>
+
+<h1>Matterhorn ED72ED0D info</h1><h2>Firmware</h2>
+<pre><b>Version:</b>   3.15.3f<br><b>Revision:</b>  exported_1752<br><b>Date:</b>      2015-11-20<br><b>Host:</b>      mzh-rMBPL 3.13.0-65-generic<br></pre>
+<h2>Hardware</h2>
+<pre><b>CPU board:</b> D53427RKE (G87790-407)<br></pre>
+<h2>Channels</h2><table class="channelstable"><tr><th>#</th>
+<th>Channel name</th>
+<th>Status</th>
+<th>Video source</th>
+<th>Audio source</th>
+<th>Stream</th>
+<th>Bitrate</th>
+<th>Actual bitrate</th>
+<th>Frame size</th>
+<th>FPS / Actual FPS</th>
+<th>Port</th>
+<th>&nbsp;</th>
+</tr><tr><td>1</td><td><a href="/admin/channel1/status">dce_pr</a></td><td><span class="statusinfo" id="status1"><img src="/images/progress.gif"></span></td><td><a href="/admin/sources/D2P280762.sdi-a">SDI-A</a></td><td><a href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></td><td>H.264+AAC</td><td>9000 kbps</td><td><span id="bitrate_1"><img src="/images/progress.gif"></span></td><td>1280x720</td><td>30 / <span id="actual_fps_1">30.0</span></td><td>8000</td><td><a href="/preview.cgi?channel=1">View</a></td></tr><tr><td>2</td><td><a href="/admin/channel2/status">dce_live_lowbr</a></td><td><span class="statusinfo" id="status2"><img src="/images/progress.gif"></span></td><td><span class="pseudo_href" id="show_link_2" onclick="toggle_sources('2');">2 sources</span><span style="display:none" id="sources_list_2"><ul class="multiplexed_list"><li><a href="/admin/sources/D2P280762.sdi-a">SDI-A</a></li><li><a href="/admin/sources/D2P280762.hdmi-b">HDMI-B</a></li></ul><span class="pseudo_href" onclick="toggle_sources('2');">collapse list</span></span></td><td><a href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></td><td>H.264+AAC</td><td>250 kbps</td><td><span id="bitrate_2"><img src="/images/progress.gif"></span></td><td>960x270</td><td>30 / <span id="actual_fps_2">30.0</span></td><td>8001</td><td><a href="/preview.cgi?channel=2">View</a></td></tr><tr><td>3</td><td><a href="/admin/channel3/status">dce_live</a></td><td><span class="statusinfo" id="status3"><img src="/images/progress.gif"></span></td><td><span class="pseudo_href" id="show_link_3" onclick="toggle_sources('3');">2 sources</span><span style="display:none" id="sources_list_3"><ul class="multiplexed_list"><li><a href="/admin/sources/D2P280762.sdi-a">SDI-A</a></li><li><a href="/admin/sources/D2P280762.hdmi-b">HDMI-B</a></li></ul><span class="pseudo_href" onclick="toggle_sources('3');">collapse list</span></span></td><td><a href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></td><td>H.264+AAC</td><td>4000 kbps</td><td><span id="bitrate_3"><img src="/images/progress.gif"></span></td><td>1920x540</td><td>30 / <span id="actual_fps_3">30.0</span></td><td>8002</td><td><a href="/preview.cgi?channel=3">View</a></td></tr><tr><td>4</td><td><a href="/admin/channel4/status">dce_pn</a></td><td><span class="statusinfo" id="status4"><img src="/images/progress.gif"></span></td><td><a href="/admin/sources/D2P280762.hdmi-b">HDMI-B</a></td><td><a href="/admin/sources/audio_D2P280762.sdi-a-audio">SDI-A Audio</a></td><td>H.264+AAC</td><td>9000 kbps</td><td><span id="bitrate_4"><img src="/images/progress.gif"></span></td><td>1920x1080</td><td>30 / <span id="actual_fps_4">30.0</span></td><td>8003</td><td><a href="/preview.cgi?channel=4">View</a></td></tr></table><br>Overall system load: 39%<br>
+<script type="text/javascript">
+
+function showChannelStatuses(data)
+{
+    if (data.ready !== false)
+    {
+        for( var id in data )
+        {
+            var cs = data[id];
+            var status = '';
+            var status_severity = '';
+            
+            if( cs.error == 'serverdown' )
+            {
+                status = 'server down';
+                status_severity = 'error';
+            }
+            else if( cs.error == 'no source' ) // No video source assigned to this channel.
+            {
+                status = '&mdash;';
+            }
+            else if( cs.input != 1 )
+            {
+                status = 'not connected';
+                status_severity = 'error';
+            }
+            else if( cs.ageoflastpacket > 1.0 )
+            {
+                status = 'stalled';
+                
+                if( cs.ageoflastpacket > 5.0 )
+                    status_severity = 'error';
+                else
+                    status_severity = 'warning';
+            }
+            
+            if( cs.nosignal > 0 )
+            {
+                if( status != '' )
+                    status += ', ';
+                else
+                    status_severity = 'warning';
+                
+                status += 'no signal';
+            }
+            
+            if( status == '' )
+                status = 'ok';
+            
+            $('#status' + id).html(status);
+            
+            if (!cs.error)
+            {
+                $('#bitrate_' + id).html(cs.actualbitrate + " kbps");
+                $('#actual_fps_' + id).html(cs.actualframerate);
+            }
+            else
+            {
+                $('#bitrate_' + id).html("&mdash;");
+                $('#actual_fps_' + id).html("&mdash;");
+            }
+            
+            if( status_severity != '' )
+                $('#status' + id).addClass(status_severity);
+        }
+        
+        // Request updates each ten seconds
+        // TODO: take into account number of channels
+        setTimeout(updateChannelStatuses, 10000);
+    }
+    else
+    {
+        // Channels are not ready. Try again each second
+        setTimeout(updateChannelStatuses, 1000);
+    }
+}
+
+function updateChannelStatuses()
+{
+	$.getJSON('/ajax/channels_status.cgi', showChannelStatuses);
+}
+
+$(document).ready(function() {
+				  updateChannelStatuses();
+			  });
+
+</script>
+
+      </div>
+      </div>
+      </div>
+
+
+  </body>
+</html>
+

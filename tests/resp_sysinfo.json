@@ -1,0 +1,250 @@
+{
+  "system": {
+    "product": "Matterhorn",
+    "network": {
+      "interfaces": [
+        {
+          "name": "eth0",
+          "ipaddr": "140.247.197.105"
+        }
+      ]
+    },
+    "serial": "ED72ED0D",
+    "uptime": 1359944,
+    "firmware": {
+      "version": "3.15.3f",
+      "date": "2015-11-20"
+    },
+    "data": {
+      "total": 975022608,
+      "cfg_rec_root_path": "\/data\/videos",
+      "free": 974938540,
+      "available": 974922156,
+      "mountpoint": "\/data",
+      "rec_root_path": "\/data\/videos"
+    }
+  },
+  "time": 1464965678,
+  "channels": [
+    {
+      "id": "1",
+      "codecs": {
+        "audio": {
+          "name": "AAC",
+          "bitrate": "160"
+        },
+        "video": {
+          "name": "H264",
+          "bitrate": "3430000",
+          "framesize": "1280x720",
+          "fps": "30.0"
+        }
+      },
+      "uuid": "1a753739-09d6-4bcc-bb37-5cd827ebdcad",
+      "state": "OK",
+      "name": "dce-pr",
+      "recorder": {
+        "enabled": false,
+        "state": "",
+        "time": 0
+      }
+    },
+    {
+      "id": "2",
+      "codecs": {
+        "audio": {
+          "name": "AAC",
+          "bitrate": "160"
+        },
+        "video": {
+          "name": "H264",
+          "bitrate": "3430000",
+          "framesize": "1280x720",
+          "fps": "30.0"
+        }
+      },
+      "uuid": "949092cb-f51a-4925-9e5d-694baf1acbf3",
+      "state": "OK",
+      "name": "dce-pn",
+      "recorder": {
+        "enabled": false,
+        "state": "",
+        "time": 0
+      }
+    },
+    {
+      "id": "3",
+      "codecs": {
+        "audio": {
+          "name": "AAC",
+          "bitrate": "320"
+        },
+        "video": {
+          "name": "H264",
+          "bitrate": "6467000",
+          "framesize": "1920x1080",
+          "fps": "30.0"
+        }
+      },
+      "uuid": "6f2c3535-932f-48a8-8092-dd76879b2369",
+      "state": "OK",
+      "name": "dce-live",
+      "recorder": {
+        "enabled": false,
+        "state": "",
+        "time": 0
+      }
+    },
+    {
+      "id": "4",
+      "codecs": {
+        "audio": {
+          "name": "AAC",
+          "bitrate": "320"
+        },
+        "video": {
+          "name": "H264",
+          "bitrate": "3430000",
+          "framesize": "1280x720",
+          "fps": "30.0"
+        }
+      },
+      "uuid": "aaa19765-6c80-48cc-9e5d-4f686d611c43",
+      "state": "OK",
+      "name": "dce-pr",
+      "recorder": {
+        "enabled": false,
+        "state": "",
+        "time": 0
+      }
+    },
+    {
+      "id": "m2",
+      "codecs": {},
+      "uuid": "ab4fee87-87b6-4873-9efa-de1f1b4c46bc",
+      "state": "OK",
+      "name": "Recorder 2",
+      "recorder": {
+        "enabled": false,
+        "state": "",
+        "time": 0
+      }
+    },
+    {
+      "id": "m3",
+      "codecs": {},
+      "uuid": "5dfc15cf-7283-4197-9288-d4b2ef85db10",
+      "state": "OK",
+      "name": "Recorder naomi 3",
+      "recorder": {
+        "enabled": false,
+        "state": "disabled",
+        "time": 0
+      }
+    }
+  ],
+  "inputs": {
+    "audio": [
+      {
+        "id": "D2P280762.analog-a",
+        "status": "OK",
+        "name": "Analog-A Audio"
+      },
+      {
+        "id": "D2P280762.analog-b",
+        "status": "OK",
+        "name": "Analog-B Audio"
+      },
+      {
+        "id": "D2P280762.hdmi-a-audio",
+        "status": "OK",
+        "name": "HDMI-A Audio"
+      },
+      {
+        "id": "D2P280762.hdmi-b-audio",
+        "status": "OK",
+        "name": "HDMI-B Audio"
+      },
+      {
+        "channels": [
+          {
+            "levels": [
+              28,
+              15,
+              25,
+              14,
+              28
+            ]
+          },
+          {
+            "levels": [
+              29,
+              16,
+              26,
+              14,
+              28
+            ]
+          }
+        ],
+        "id": "D2P280762.sdi-a-audio",
+        "status": "OK",
+        "name": "SDI-A Audio"
+      },
+      {
+        "id": "D2P280762.sdi-b-audio",
+        "status": "OK",
+        "name": "SDI-B Audio"
+      }
+    ],
+    "video": [
+      {
+        "id": "D2P280762.hdmi-a",
+        "status": "OK",
+        "name": "HDMI-A",
+        "resolution": "",
+        "fps": "0.0",
+        "preview": true
+      },
+      {
+        "id": "D2P280762.hdmi-b",
+        "status": "OK",
+        "name": "HDMI-B",
+        "resolution": "1280x720@60",
+        "fps": "1.0",
+        "preview": true
+      },
+      {
+        "id": "D2P280762.sdi-a",
+        "status": "OK",
+        "name": "SDI-A",
+        "resolution": "1280x720@60",
+        "fps": "30.0",
+        "preview": true
+      },
+      {
+        "id": "D2P280762.sdi-b",
+        "status": "OK",
+        "name": "SDI-B",
+        "resolution": "1280x720@60",
+        "fps": "30.3",
+        "preview": true
+      },
+      {
+        "id": "D2P280762.vga-a",
+        "status": "OK",
+        "name": "VGA-A",
+        "resolution": "",
+        "fps": "0.0",
+        "preview": true
+      },
+      {
+        "id": "D2P280762.vga-b",
+        "status": "OK",
+        "name": "VGA-B",
+        "resolution": "",
+        "fps": "0.0",
+        "preview": true
+      }
+    ]
+  }
+}
