@@ -66,7 +66,7 @@ class TestMhPearl(object):
                 admin_server_usr='jane',
                 admin_server_pwd='doe',
                 update_frequency_in_seconds=122,
-                backup_agent=True)
+                backup_agent=False)
         assert response
         assert httpretty.last_request().\
                 parsed_body['DEVICE_USERNAME'][0] == epiphan_user
@@ -101,7 +101,7 @@ class TestMhPearl(object):
                     admin_server_usr='jane',
                     admin_server_pwd='plumber',
                     update_frequency_in_seconds=122,
-                    backup_agent=True)
+                    backup_agent=False)
 
         assert 'expected(plumber), got(doe)' in e.value.message
         assert httpretty.last_request().\

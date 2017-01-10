@@ -16,7 +16,7 @@ def filter_by_attr_name(tag_name):
 
 
 def pluck_form_values(bs4_form):
-    """scrape values from form and return them in dict keyed by tag id.
+    """scrape values from form and return them in dict keyed by tag attr name.
 
     handles <input> (hidden, text, password, checkbox, radio),
         <select>,
@@ -31,7 +31,7 @@ def pluck_form_values(bs4_form):
         key = pick_name_for_tag(t)
 
         if key is None or key in result:
-            # tag id already processed (ex: radio group) or duplicate
+            # tag already processed (ex: radio group) or duplicate
             # or ignored because of missing name
             continue
 
